@@ -1,0 +1,466 @@
+/*
+ * ReVive — Dreamy Lavender-to-Sage Environmental Campaign Design System
+ * Inspired by elegant editorial journals & warm circular-economy campaigns
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Palette: Dreamy Lavender Mist & Morning Sage */
+  --lavender-50: #fbf9fd;
+  --lavender-100: #f4eef9;
+  --lavender-200: #e8dcf4;
+  --lavender-300: #d6bfec;
+  --lavender-500: #9e72c3;
+  
+  --sage-50: #f5f8f5;
+  --sage-100: #ebf3ec;
+  --sage-200: #d5e5d7;
+  --sage-300: #b5d1b9;
+  --sage-600: #4a7c52;
+  
+  --forest-900: #143523;
+  --forest-800: #1b432e;
+  --forest-700: #26593e;
+  --forest-text: #223f2f;
+  
+  --terracotta: #d96645;
+  --warm-amber: #e09736;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f4fb;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(232, 220, 244, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(213, 229, 215, 0.7) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(244, 238, 249, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(235, 243, 236, 0.8) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(244, 238, 249, 0.7) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--forest-text);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Editorial Typography */
+.font-editorial-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Dreamy Card Surfaces */
+.dreamy-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px -15px rgba(20, 53, 35, 0.05), 0 2px 8px -2px rgba(20, 53, 35, 0.02);
+  border-radius: 28px;
+}
+
+.dreamy-card-subtle {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 249, 245, 0.8) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(181, 209, 185, 0.4);
+  border-radius: 24px;
+}
+
+.dreamy-badge {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(213, 229, 215, 0.6);
+}
+
+/* Friendly Pill Buttons */
+.btn-primary {
+  background-color: var(--forest-900);
+  color: #ffffff;
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -6px rgba(20, 53, 35, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--forest-800);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -6px rgba(20, 53, 35, 0.3);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--forest-900);
+  border: 1px solid rgba(213, 229, 215, 0.8);
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background: #f7faf7;
+  border-color: var(--sage-300);
+  transform: translateY(-2px);
+}
+
+/* 2D Conveyor Belt Animation (Realistic Moving Belt with Chevrons) */
+@keyframes beltTread {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 48px 0;
+  }
+}
+
+.conveyor-belt-realistic {
+  background-color: #1e293b;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 0px,
+      rgba(255, 255, 255, 0.12) 8px,
+      transparent 8px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(52, 211, 153, 0.15) 0px,
+      rgba(52, 211, 153, 0.15) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  background-size: 48px 100%, 48px 100%;
+  animation: beltTread 0.9s linear infinite;
+}
+
+.conveyor-track-friendly {
+  background-color: #1e293b;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 0px,
+      rgba(255, 255, 255, 0.12) 8px,
+      transparent 8px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(52, 211, 153, 0.15) 0px,
+      rgba(52, 211, 153, 0.15) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  background-size: 48px 100%, 48px 100%;
+  animation: beltTread 0.9s linear infinite;
+}
+
+/* Rotating roller wheels at conveyor ends */
+@keyframes rollerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.conveyor-roller {
+  animation: rollerSpin 1.2s linear infinite;
+}
+
+/* Pulsing directional movement arrows */
+@keyframes arrowPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
+
+.flow-arrow-pulse {
+  animation: arrowPulse 1.1s ease-in-out infinite;
+}
+
+/* Waste item visibly dropping into bin */
+@keyframes dropIntoBin {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(15px, 25px) scale(0.95) rotate(5deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(30px, 65px) scale(0.7) rotate(12deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(40px, 100px) scale(0.3) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+.anim-drop-bin {
+  animation: dropIntoBin 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+}
+
+/* Laser Scanner Glow */
+@keyframes laserSweep {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(-5px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(5px);
+  }
+}
+
+.laser-sweep {
+  animation: laserSweep 1.6s ease-in-out infinite;
+}
+
+/* Gentle Floating Animation */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-slow {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f2f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbdcd0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3c2a9;
+}
+
+/* ==========================================================================
+   2D Illustrated Sorting Bins & Conveyor Animation Enhancements
+   ========================================================================== */
+
+/* Bin receiving item bounce */
+@keyframes binReceiveBounce {
+  0% { transform: scale(1) translateY(0); }
+  25% { transform: scale(1.05) translateY(-8px); }
+  50% { transform: scale(0.97) translateY(2px); }
+  75% { transform: scale(1.02) translateY(-2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+.bin-receiving-bounce {
+  animation: binReceiveBounce 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hinged Bin Lid Open / Close */
+.bin-lid {
+  transform-origin: 12% 88%;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bin-lid-open {
+  transform: rotate(-32deg) translateY(-6px);
+}
+
+/* Rising Fill Level Column */
+.bin-fill-level {
+  transition: height 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Floating Arrival Badge (+1 SORTED!) */
+@keyframes arrivalBadgeFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.75);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.85);
+  }
+}
+
+.anim-arrival-badge {
+  animation: arrivalBadgeFloat 1.25s ease-out forwards;
+}
+
+/* Pneumatic Air Jet Blast */
+@keyframes airJetBlast {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateX(0);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2) translateX(8px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6) translateX(18px);
+  }
+}
+
+.air-jet-blast-anim {
+  animation: airJetBlast 0.6s ease-out forwards;
+}
+
+/* Optical Scanner Inspection HUD Popup */
+@keyframes hudPopupAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 8px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.scanner-hud-popup {
+  animation: hudPopupAnim 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Diverter Arm Sweep */
+.diverter-paddle {
+  transform-origin: top right;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.diverter-paddle-active {
+  transform: rotate(-28deg);
+}
+
+/* Chute directional guide pulse */
+@keyframes chutePulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translateY(4px);
+  }
+}
+
+.chute-arrow-pulse {
+  animation: chutePulse 0.9s ease-in-out infinite;
+}
+
+/* Dynamic falling trajectory from Stage 3 diverter into bin opening */
+.falling-into-bin {
+  transition: left 0.7s cubic-bezier(0.25, 1, 0.5, 1),
+              top 0.7s cubic-bezier(0.4, 0, 0.8, 0.4),
+              transform 0.7s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Plunge directly inside bin opening */
+@keyframes plungeInsideBin {
+  0% {
+    transform: translate(-50%, 0) scale(0.9) rotate(5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, 25px) scale(0.65) rotate(12deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, 60px) scale(0.25) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+.anim-plunge-bin {
+  animation: plungeInsideBin 0.65s cubic-bezier(0.5, 0, 0.75, 0) forwards !important;
+}
+
+/* Chute Funnel styling above each bin */
+.sorting-chute-funnel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(241, 245, 249, 0.3) 100%);
+  border-left: 2px dashed rgba(148, 163, 184, 0.7);
+  border-right: 2px dashed rgba(148, 163, 184, 0.7);
+}
+
+/* ==========================================================================
+   Physical Waste Object Conveyor & Bin Occlusion Physics
+   ========================================================================== */
+
+/* Physical waste object riding ON the belt */
+.waste-object-carrier {
+  position: absolute;
+  pointer-events: none;
+  z-index: 22; /* Sits in front of conveyor belt (z:10) but behind bin front wall (z:26) and collar (z:28) */
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3));
+  will-change: transform, left, top;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.waste-object-carrier svg {
+  display: block;
+}
+
+/* Horizontal glide along conveyor */
+.conveyor-glide {
+  transition: left 0.95s cubic-bezier(0.2, 0.8, 0.2, 1),
+              top 0.4s ease,
+              transform 0.4s ease !important;
+}
+
+/* Falling through chute */
+.chute-descent {
+  transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+              top 0.5s cubic-bezier(0.4, 0, 0.8, 0.4),
+              transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Sinking behind the bin's front wall */
+.sinking-behind-front-wall {
+  transition: transform 0.45s cubic-bezier(0.5, 0, 0.8, 0.5),
+              opacity 0.3s ease-in 0.12s !important;
+  transform: translate(-50%, 0) scale(0.3) rotate(15deg) !important;
+  opacity: 0 !important;
+}
+
+/* Depth layering for illustrated bin to hide object behind front wall */
+.bin-collar-lip {
+  z-index: 28 !important;
+  position: relative !important;
+}
+
+.bin-front-wall {
+  z-index: 26 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+
+

@@ -1,0 +1,14 @@
+# Security: Never commit environment files or API keys
+.env
+.env.local
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System files
+.DS_Store
+Thumbs.db

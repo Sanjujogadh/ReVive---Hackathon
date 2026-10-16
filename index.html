@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReVive — Give Waste a Second Life | Smart Recycling Assistant</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#f2f8f4',
+              100: '#e1ede4',
+              200: '#c5ddcd',
+              700: '#26593e',
+              800: '#1b432e',
+              900: '#143523',
+              950: '#0c2216',
+            },
+            lavender: {
+              50: '#fbf9fd',
+              100: '#f4eef9',
+              200: '#e8dcf4',
+              300: '#d6bfec',
+              400: '#bd9de1',
+              600: '#8c5ab8',
+            },
+            sage: {
+              50: '#f5f8f5',
+              100: '#ebf3ec',
+              200: '#d5e5d7',
+              300: '#b5d1b9',
+              500: '#5c9665',
+              700: '#34613b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Dreamy Editorial Campaign Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=17">
+</head>
+<body class="min-h-screen text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+
+  <!-- Friendly Announcement Bar -->
+  <div class="bg-forest-900 text-white/90 text-xs py-2 px-4 border-b border-forest-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium">Bengaluru BBMP 3-Way Waste Segregation Guide (2020 Bye-Laws)</span>
+      </div>
+      <div class="flex items-center gap-4 text-white/70 text-[11px]">
+        <span>🌿 Zero Sign-Up</span>
+        <span>•</span>
+        <span>Evidence-Based Guidance</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Campaign Navigation -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-xl border-b border-white/60 transition-all shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-emerald-800 to-forest-900 flex items-center justify-center text-white shadow-md shadow-forest-900/10 group-hover:scale-105 transition-transform">
+          <svg class="w-5 h-5 text-emerald-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-2xl font-bold tracking-tight text-forest-950 font-editorial-serif block leading-none">ReVive</span>
+          <span class="text-[10px] tracking-widest uppercase text-emerald-800 font-bold">Give Waste a Second Life</span>
+        </div>
+      </a>
+
+      <!-- Friendly Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold text-forest-900">
+        <a href="#scanner-section" class="hover:text-emerald-700 transition-colors">Packaging Scanner</a>
+        <a href="#digital-twin-section" class="hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+          <span>Virtual Facility</span>
+          <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded-full font-mono font-bold">SIMULATED</span>
+        </a>
+        <a href="#dashboard-section" class="hover:text-emerald-700 transition-colors">Community Impact</a>
+        <a href="#regulations-section" class="hover:text-emerald-700 transition-colors">Bengaluru Rules</a>
+      </nav>
+
+      <!-- Key Config Button & Status Pill -->
+      <div class="flex items-center gap-2.5">
+        <div id="backend-status-pill" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-950 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Bengaluru Segregation Guide</span>
+        </div>
+        <button id="nav-btn-key-setup" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-50 border border-slate-300 text-xs font-semibold text-forest-900 transition-all shadow-sm">
+          <span>🔑</span>
+          <span>AI Vision Setup</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section: Warm, Beautiful Environmental Campaign -->
+  <section class="relative pt-12 pb-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Hero Headline & Campaign Purpose -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-emerald-200 text-xs font-semibold text-forest-900 shadow-sm">
+            <span class="text-emerald-600">🌿</span>
+            <span>A Friendly Waste Guide for Bengaluru Citizens</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest-950 font-editorial-serif leading-[1.12] tracking-tight">
+            Give everyday packaging a <span class="italic font-normal text-emerald-800">second life.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-forest-800 leading-relaxed max-w-2xl">
+            Not sure whether a chip packet can be recycled, or what to do with a greasy pizza box? <strong>ReVive</strong> helps you identify confusing multi-material packaging in seconds, follow verified city disposal rules, and see how your waste gets sorted in a modern recycling facility.
+          </p>
+
+          <!-- Friendly Primary CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#scanner-section" class="btn-primary px-7 py-3.5 text-xs font-bold tracking-wide flex items-center gap-2">
+              <span>Scan or Search Packaging</span>
+              <span>↓</span>
+            </a>
+            <a href="#digital-twin-section" class="btn-secondary px-7 py-3.5 text-xs font-bold tracking-wide flex items-center gap-2">
+              <span>Explore Virtual Facility</span>
+              <span class="text-[10px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full font-mono font-bold">2D PREVIEW</span>
+            </a>
+          </div>
+
+          <!-- Credibility Highlights -->
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200/60 max-w-lg">
+            <div>
+              <div class="text-2xl font-bold text-forest-950 font-editorial-serif">BBMP 2020</div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Bengaluru Disposal Guidelines</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-forest-950 font-editorial-serif">AI-Assisted</div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Material Identification</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-forest-950 font-editorial-serif">Zero Sign-up</div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Instant in Browser</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Integrated Environmental Still-Life Photograph -->
+        <div class="lg:col-span-5">
+          <div class="relative dreamy-card p-3 shadow-2xl">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-emerald-950">
+              <!-- High-resolution environmental still-life photograph -->
+              <img 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" 
+                alt="Clean green plant seedling growing from recyclable glass, representing renewal and circular living" 
+                class="w-full h-full object-cover brightness-95 contrast-105 hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/20 to-transparent"></div>
+              
+              <!-- Floating Caption -->
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/50 shadow-lg">
+                <div class="flex items-center justify-between text-xs font-bold text-forest-950 mb-1">
+                  <span>Small Habits, Citywide Impact</span>
+                  <span class="text-[10px] text-emerald-800 font-mono font-bold">BBMP Schedule-I</span>
+                </div>
+                <p class="text-xs text-forest-800 leading-snug">
+                  Clean cardboard and dry plastics are recycled into new products. Multi-layer snack packets are safely sent to cement plants for energy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Connected User Journey Banner -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+    <div class="dreamy-card-subtle p-5 sm:p-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-forest-950">Your 4-Step Journey:</span>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-forest-900">
+          <span class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-forest-900 text-white flex items-center justify-center text-xs">1</span> Scan Waste</span>
+          <span class="text-slate-400">➔</span>
+          <span class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-forest-900 text-white flex items-center justify-center text-xs">2</span> What It Is</span>
+          <span class="text-slate-400">➔</span>
+          <span class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-forest-900 text-white flex items-center justify-center text-xs">3</span> Where It Goes</span>
+          <span class="text-slate-400">➔</span>
+          <span class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-forest-900 text-white flex items-center justify-center text-xs">4</span> Watch It Get Sorted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMARY EXPERIENCE: Scanner & In-Place Result Card (Same Page!) -->
+  <section id="scanner-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Input Column: Smart Scanner -->
+      <div class="lg:col-span-5" id="scanner-input-container">
+        <!-- Rendered by js/scanner.js -->
+      </div>
+
+      <!-- Output Column: Recycling Assistant Result Card -->
+      <div class="lg:col-span-7" id="assistant-results-container">
+        <!-- Rendered by js/assistant.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: 2D Digital Twin Virtual Facility ([SIMULATED]) -->
+  <section id="digital-twin-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div id="digital-twin-container">
+      <!-- Rendered by js/twin.js -->
+    </div>
+  </section>
+
+  <!-- SECTION 3: Community Impact & Simulated Telemetry -->
+  <section id="dashboard-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div id="dashboard-container">
+      <!-- Rendered by js/dashboard.js -->
+    </div>
+  </section>
+
+  <!-- SECTION 4: Verified Bengaluru Municipal Regulations -->
+  <section id="regulations-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="dreamy-card p-6 md:p-8">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-xs uppercase tracking-wider font-bold text-emerald-800">BBMP Framework References</span>
+          <h2 class="text-2xl font-bold text-forest-950 font-editorial-serif">
+            Bengaluru Waste Segregation Framework & Bye-Law Citations
+          </h2>
+        </div>
+        <span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-emerald-950 rounded-full border border-emerald-200">
+          BBMP SWM Bye-Laws 2020
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-white/80 border border-slate-200">
+          <div class="text-xs font-bold text-forest-900 mb-2">1. BBMP SWM Bye-Laws 2020</div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Mandatory 3-way segregation across all homes and businesses: Category A (Wet / Food Waste), Category B (Dry / Recyclables), and Category C (Domestic Sanitary / Hazardous).
+          </p>
+          <div class="text-[10px] text-slate-400 font-mono">Ref: BBMP Bye-Laws Schedule-I</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/80 border border-slate-200">
+          <div class="text-xs font-bold text-forest-900 mb-2">2. MoEFCC SWM Rules 2016</div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Directs that non-recyclable multi-layered plastics with high energy value be baled at Dry Waste Collection Centres (DWCCs) for co-processing in cement kilns (Refuse-Derived Fuel).
+          </p>
+          <div class="text-[10px] text-slate-400 font-mono">Ref: MoEFCC SWM Rules (Rule 4)</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/80 border border-slate-200">
+          <div class="text-xs font-bold text-forest-900 mb-2">3. Plastic Waste Rules 2016/2021</div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Central Pollution Control Board (CPCB) standards for Extended Producer Responsibility (EPR) on multi-layer flexible sachets and plastic recovery quotas.
+          </p>
+          <div class="text-[10px] text-slate-400 font-mono">Ref: CPCB EPR Guidelines 2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-App API Key Configuration Modal -->
+  <div id="key-config-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+    <div class="dreamy-card max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🔑</span>
+          <h3 class="text-lg font-bold text-forest-950 font-editorial-serif">AI Vision Key Setup</h3>
+        </div>
+        <button id="btn-close-modal" class="text-slate-400 hover:text-slate-600 text-lg font-bold">✕</button>
+      </div>
+
+      <p class="text-xs text-forest-800 leading-relaxed">
+        To enable real-time image recognition for your own photographs, enter your free <strong>Google Gemini API key</strong>. It will be verified against Google's servers and saved securely on your local backend.
+      </p>
+
+      <div class="space-y-2">
+        <label for="modal-input-key" class="block text-xs font-bold text-forest-950">Google Gemini API Key:</label>
+        <input 
+          type="password" 
+          id="modal-input-key" 
+          placeholder="Paste AIzaSy... key here" 
+          class="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-700 font-mono"
+        />
+        <p class="text-[11px] text-slate-500">
+          Don't have a key? Get a free key at <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-emerald-700 underline font-semibold">aistudio.google.com</a>.
+        </p>
+      </div>
+
+      <div id="modal-feedback" class="hidden text-xs font-semibold p-2.5 rounded-xl"></div>
+
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button id="btn-cancel-modal" class="btn-secondary px-4 py-2 text-xs font-bold">
+          Cancel
+        </button>
+        <button id="btn-save-modal-key" class="btn-primary px-5 py-2 text-xs font-bold">
+          Verify & Save Key
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Footer -->
+  <footer class="bg-forest-950 text-white/80 py-12 border-t border-forest-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between gap-6 pb-8 border-b border-forest-900">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-emerald-800 flex items-center justify-center text-white text-sm font-bold">
+            R
+          </div>
+          <div>
+            <span class="text-base font-bold font-editorial-serif text-white block">ReVive</span>
+            <span class="text-[10px] text-emerald-400">Smart Waste & Packaging Recycling Assistant</span>
+          </div>
+        </div>
+        <div class="text-xs text-slate-400">
+          Built with care for Hackathon 2026 by <strong>Team ReVive</strong>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-wrap items-center justify-between gap-4 text-[11px] text-slate-400">
+        <p>
+          © 2026 Team ReVive. All virtual facility sorting and community telemetry metrics are simulated for educational demonstration.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="#scanner-section" class="hover:text-white transition-colors">Scanner</a>
+          <a href="#digital-twin-section" class="hover:text-white transition-colors">Virtual Facility</a>
+          <a href="#dashboard-section" class="hover:text-white transition-colors">Impact</a>
+          <a href="#regulations-section" class="hover:text-white transition-colors">Bengaluru Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Modules (with cache busting) -->
+  <script type="module" src="js/app.js?v=18"></script>
+</body>
+</html>
