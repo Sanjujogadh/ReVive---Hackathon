@@ -17,7 +17,7 @@ import subprocess
 import sys
 import socket
 
-PORT = 8001
+PORT = int(os.environ.get("PORT", 8001))
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 def create_strictly_verified_ssl_context():
